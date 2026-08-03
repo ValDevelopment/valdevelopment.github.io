@@ -248,22 +248,167 @@
                 <h2 class="section-title">Projects</h2>
 
                 <div class="projects">
+                   <article class="project">
+                        <h3>Clinical Trial Safety Analysis</h3>
+                    
+                        <p>
+                            Built a full CDISC SDTM/ADaM analysis pipeline in R using a public
+                            254-patient Alzheimer's clinical trial dataset, covering baseline
+                            demographics, adverse event summarization, and time-to-event survival
+                            analysis.
+                        </p>
+                    
+                        <p>
+                            Modeled time to adverse event using Kaplan-Meier curves and a Cox
+                            proportional hazards model, identifying a dose-response safety signal
+                            with hazard ratios of 4.15 and 5.03 versus placebo. Confirmed the finding
+                            through an age-adjusted sensitivity analysis.
+                        </p>
+                    
+                        <div class="tags">
+                            <span class="tag">R</span>
+                            <span class="tag">CDISC</span>
+                            <span class="tag">SDTM</span>
+                            <span class="tag">ADaM</span>
+                            <span class="tag">Survival Analysis</span>
+                            <span class="tag">Cox Regression</span>
+                        </div>
+                    
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ValDevelopment/CDISC-ADaM-Survival-Analysis"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                    
+                            <a
+                                href="https://github.com/ValDevelopment/CDISC-ADaM-Survival-Analysis/blob/main/cdisc_report.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Report
+                            </a>
+                        </div>
+                    </article>
+                    
+                    
+                    <article class="project">
+                        <h3>League of Legends Win Prediction &amp; Analytics</h3>
+                    
+                        <p>
+                            Analyzed more than 47,000 professional League of Legends games to model
+                            win prediction using XGBoost, achieving an AUC of 0.84. Also forecasted
+                            meta-trend shifts with ARIMA and ETS models and built a bootstrapped Elo
+                            rating system for cross-region team strength.
+                        </p>
+                    
+                        <p>
+                            Built an interactive Tableau dashboard visualizing the model's
+                            early-game predictors and comparing raw win-rate splits with
+                            multivariate findings across game years.
+                        </p>
+                    
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">Time Series</span>
+                            <span class="tag">ARIMA</span>
+                            <span class="tag">Elo Ratings</span>
+                            <span class="tag">Tableau</span>
+                        </div>
+                    
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ValDevelopment/league-of-legends-modeling"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                    
+                            <a
+                                href="https://public.tableau.com/app/profile/vladislav.fedorov/viz/LeagueofLegendswinpredictiondashboard/LeagueofLegendsWinPredictionWhatActuallyPredictsEarly-GameOutcomes"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live Dashboard
+                            </a>
+                        </div>
+                    </article>
+                    
+                    
+                    <article class="project">
+                        <h3>FAERS Disproportionality Analysis: Semaglutide</h3>
+                    
+                        <p>
+                            Conducted a post-market drug safety signal detection analysis using FDA
+                            FAERS Q4 2025 data for semaglutide products, including Ozempic, Wegovy,
+                            and Rybelsus. Applied PRR, ROR, and chi-square disproportionality methods
+                            with Haldane-Anscombe correction across 3,279 primary-suspect reports.
+                        </p>
+                    
+                        <p>
+                            Built the analysis pipeline independently in Python and SAS, validated
+                            both implementations to produce identical results, and reviewed flagged
+                            signals against MedDRA coding noise and published GLP-1 safety
+                            literature.
+                        </p>
+                    
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SAS</span>
+                            <span class="tag">FAERS</span>
+                            <span class="tag">Pharmacovigilance</span>
+                            <span class="tag">Disproportionality Analysis</span>
+                            <span class="tag">Tableau</span>
+                        </div>
+                    
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/ValDevelopment/FAERS-signal-detection"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                    
+                            <a
+                                href="https://public.tableau.com/app/profile/vladislav.fedorov/viz/FAERSAdverseEventDashboard/SemaglutideFAERSDisproportionalitySignals"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live Dashboard
+                            </a>
+                        </div>
+                    </article>
+                    
+                    
                     <article class="project">
                         <h3>OpenPowerlifting Relational Database</h3>
-
+                    
                         <p>
-                            Built a Python preprocessing pipeline and a
-                            normalized MySQL database containing more than
-                            100,000 powerlifting competition results.
+                            Designed a normalized MySQL database for 100,000 OpenPowerlifting
+                            competition results, separating lifter, meet, and result data into
+                            linked tables with primary and foreign key constraints.
                         </p>
-
+                    
+                        <p>
+                            Built a reproducible Python preprocessing pipeline and wrote SQL
+                            analyses using joins, conditional aggregation, CTEs, and window
+                            functions to examine federation participation, performance differences,
+                            and lift-attempt success rates.
+                        </p>
+                    
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">Pandas</span>
                             <span class="tag">MySQL</span>
                             <span class="tag">SQL</span>
+                            <span class="tag">Database Design</span>
                         </div>
-
+                    
                         <div class="project-links">
                             <a
                                 href="https://github.com/ValDevelopment/opl-relational-db"
@@ -274,61 +419,50 @@
                             </a>
                         </div>
                     </article>
-
+                    
+                    
                     <article class="project">
-                        <h3>Your Second Project</h3>
-
+                        <h3>Clinical Trial Power Calculator</h3>
+                    
                         <p>
-                            Briefly explain what the project does, what
-                            problem it addresses, and what you contributed.
+                            Built a two-arm clinical trial sample size and power calculator in
+                            Python and Streamlit. The application supports continuous, binary, and
+                            time-to-event endpoints using closed-form methods alongside
+                            simulation-based power estimates.
                         </p>
-
+                    
+                        <p>
+                            Implemented noncentral t, arcsine, and Schoenfeld formulas, as well as
+                            simulations that fit ANCOVA, logistic regression, and Cox proportional
+                            hazards models to synthetic trial data. Validated the formulas against
+                            independent benchmarks and demonstrated differences between
+                            closed-form power targets and regression-based Wald tests.
+                        </p>
+                    
                         <div class="tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Machine Learning</span>
                             <span class="tag">Streamlit</span>
+                            <span class="tag">Power Analysis</span>
+                            <span class="tag">Clinical Trials</span>
+                            <span class="tag">Simulation</span>
+                            <span class="tag">Survival Analysis</span>
                         </div>
-
+                    
                         <div class="project-links">
                             <a
-                                href="YOUR-PROJECT-URL"
+                                href="https://github.com/ValDevelopment/clinical-trial-power-calculator"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 GitHub
                             </a>
-
+                    
                             <a
-                                href="YOUR-DEMO-URL"
+                                href="https://clinical-trial-power-calculator.streamlit.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Live demo
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project">
-                        <h3>Your Third Project</h3>
-
-                        <p>
-                            Add another analysis, dashboard, model, or
-                            application here.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">R</span>
-                            <span class="tag">Statistics</span>
-                            <span class="tag">Visualization</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a
-                                href="YOUR-PROJECT-URL"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
+                                Live App
                             </a>
                         </div>
                     </article>
