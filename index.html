@@ -4,30 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vladislav Fedorov | Data Portfolio</title>
-    <meta
-        name="description"
-        content="Statistics and data analytics portfolio featuring Python, SQL, machine learning, and data visualization projects."
-    >
+    <title>Your Name | Portfolio</title>
 
     <style>
-        :root {
-            --background: #090b10;
-            --surface: rgba(255, 255, 255, 0.055);
-            --surface-hover: rgba(255, 255, 255, 0.09);
-            --border: rgba(255, 255, 255, 0.11);
-            --text: #f4f4f5;
-            --muted: #a1a1aa;
-            --accent: #8b5cf6;
-            --accent-light: #c4b5fd;
-            --secondary: #22d3ee;
-            --max-width: 1100px;
-        }
-
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         html {
@@ -35,452 +16,223 @@
         }
 
         body {
-            min-height: 100vh;
-            overflow-x: hidden;
-            font-family:
-                Inter,
-                ui-sans-serif,
-                system-ui,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background:
-                radial-gradient(
-                    circle at 15% 15%,
-                    rgba(139, 92, 246, 0.18),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 85% 25%,
-                    rgba(34, 211, 238, 0.12),
-                    transparent 28%
-                ),
-                var(--background);
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #fff;
+            line-height: 1.5;
         }
 
         a {
-            color: inherit;
-            text-decoration: none;
+            color: #222;
         }
 
-        .container {
-            width: min(calc(100% - 40px), var(--max-width));
-            margin: 0 auto;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid transparent;
-            background: rgba(9, 11, 16, 0.75);
-            backdrop-filter: blur(16px);
-        }
-
-        .nav-content {
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-
-        .logo {
-            font-size: 1.1rem;
-            font-weight: 750;
-            letter-spacing: -0.03em;
-        }
-
-        .logo span {
-            color: var(--accent-light);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            font-size: 0.94rem;
-            color: var(--muted);
-        }
-
-        .nav-links a {
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-        }
-
-        .hero {
-            min-height: calc(100vh - 72px);
+        .page {
             display: grid;
-            align-items: center;
-            padding: 90px 0;
+            grid-template-columns: 280px minmax(0, 800px);
+            gap: 70px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 40px;
         }
 
-        .hero-content {
-            max-width: 860px;
+        .sidebar {
+            position: sticky;
+            top: 50px;
+            align-self: start;
         }
 
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            margin-bottom: 24px;
-            padding: 8px 13px;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            font-size: 0.88rem;
-            color: var(--accent-light);
-            background: var(--surface);
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
             border-radius: 50%;
-            background: #4ade80;
-            box-shadow: 0 0 14px rgba(74, 222, 128, 0.8);
+            border: 1px solid #ddd;
         }
 
         h1 {
-            max-width: 900px;
-            font-size: clamp(3.1rem, 8vw, 6.6rem);
-            line-height: 0.98;
-            letter-spacing: -0.065em;
+            margin: 24px 0 5px;
+            font-size: 2rem;
+            line-height: 1.2;
         }
 
-        .gradient-text {
-            color: transparent;
-            background: linear-gradient(
-                90deg,
-                var(--accent-light),
-                var(--secondary)
-            );
-            background-clip: text;
-            -webkit-background-clip: text;
+        .subtitle {
+            margin: 0;
+            color: #666;
         }
 
-        .hero-description {
-            max-width: 700px;
-            margin-top: 28px;
-            font-size: clamp(1.05rem, 2vw, 1.25rem);
-            color: var(--muted);
+        .bio {
+            margin-top: 22px;
+            color: #444;
         }
 
-        .hero-buttons {
+        .links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 38px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 24px;
         }
 
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 48px;
-            padding: 0 20px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            font-weight: 650;
+        .links a {
+            text-decoration: none;
+            border-bottom: 1px solid #bbb;
+        }
+
+        .links a:hover {
+            border-color: #222;
+        }
+
+        .section {
+            margin-bottom: 55px;
+        }
+
+        .section-title {
+            margin: 0 0 22px;
+            font-size: 1.5rem;
+        }
+
+        .projects {
+            display: grid;
+            gap: 18px;
+        }
+
+        .project {
+            padding: 24px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
             transition:
-                transform 0.2s ease,
-                background 0.2s ease,
-                border-color 0.2s ease;
+                border-color 0.15s ease,
+                transform 0.15s ease;
         }
 
-        .button:hover {
+        .project:hover {
+            border-color: #999;
             transform: translateY(-2px);
         }
 
-        .button-primary {
-            border-color: transparent;
-            color: #090b10;
-            background: linear-gradient(
-                135deg,
-                var(--accent-light),
-                var(--secondary)
-            );
+        .project h3 {
+            margin: 0;
+            font-size: 1.2rem;
         }
 
-        .button-secondary {
-            background: var(--surface);
+        .project p {
+            margin: 10px 0 16px;
+            color: #555;
         }
 
-        .button-secondary:hover {
-            border-color: rgba(196, 181, 253, 0.5);
-            background: var(--surface-hover);
-        }
-
-        section {
-            padding: 105px 0;
-        }
-
-        .section-heading {
-            margin-bottom: 44px;
-        }
-
-        .section-label {
-            margin-bottom: 10px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--accent-light);
-        }
-
-        h2 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            line-height: 1.1;
-            letter-spacing: -0.045em;
-        }
-
-        .section-description {
-            max-width: 650px;
-            margin-top: 14px;
-            color: var(--muted);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.35fr 0.65fr;
-            gap: 24px;
-        }
-
-        .glass-card {
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-        }
-
-        .about-card {
-            padding: 32px;
-        }
-
-        .about-card p {
-            color: var(--muted);
-        }
-
-        .about-card p + p {
-            margin-top: 16px;
-        }
-
-        .quick-facts {
-            display: grid;
-            gap: 12px;
-            padding: 22px;
-        }
-
-        .fact {
-            padding: 15px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .fact-label {
-            display: block;
-            margin-bottom: 3px;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--muted);
-        }
-
-        .fact-value {
-            font-weight: 650;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-        }
-
-        .project-card {
-            position: relative;
-            overflow: hidden;
+        .project-links {
             display: flex;
-            flex-direction: column;
-            min-height: 340px;
-            padding: 28px;
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            background: var(--surface);
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease;
+            gap: 16px;
         }
 
-        .project-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            pointer-events: none;
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(139, 92, 246, 0.18),
-                    transparent 45%
-                );
-            transition: opacity 0.25s ease;
+        .project-links a {
+            font-size: 0.95rem;
+            font-weight: bold;
+            text-decoration: none;
         }
 
-        .project-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(196, 181, 253, 0.42);
-            background: var(--surface-hover);
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-number {
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.13em;
-            color: var(--accent-light);
-        }
-
-        .project-card h3 {
-            margin-top: 45px;
-            font-size: 1.6rem;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-        }
-
-        .project-card p {
-            margin-top: 14px;
-            color: var(--muted);
+        .project-links a:hover {
+            text-decoration: underline;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 20px;
+            gap: 7px;
+            margin-bottom: 18px;
         }
 
         .tag {
-            padding: 6px 10px;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            font-size: 0.78rem;
-            color: #d4d4d8;
-            background: rgba(255, 255, 255, 0.035);
-        }
-
-        .project-link {
-            position: relative;
-            margin-top: auto;
-            padding-top: 24px;
-            font-weight: 700;
-            color: var(--accent-light);
-        }
-
-        .project-link span {
-            display: inline-block;
-            margin-left: 5px;
-            transition: transform 0.2s ease;
-        }
-
-        .project-card:hover .project-link span {
-            transform: translateX(5px);
+            padding: 4px 9px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #555;
+            background: #fafafa;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
 
         .skill {
-            padding: 11px 16px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            color: #d4d4d8;
-            background: var(--surface);
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-3px);
-            border-color: rgba(34, 211, 238, 0.45);
-        }
-
-        .contact-card {
-            padding: 55px;
-            text-align: center;
-            background:
-                radial-gradient(
-                    circle at top,
-                    rgba(139, 92, 246, 0.18),
-                    transparent 50%
-                ),
-                var(--surface);
-        }
-
-        .contact-card p {
-            max-width: 600px;
-            margin: 18px auto 30px;
-            color: var(--muted);
+            padding: 7px 11px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            color: #444;
         }
 
         footer {
-            padding: 30px 0 45px;
-            border-top: 1px solid var(--border);
-            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
             font-size: 0.9rem;
-            color: var(--muted);
+            color: #777;
         }
 
-        @media (max-width: 760px) {
-            .nav-links a:not(.resume-nav-link) {
-                display: none;
-            }
-
-            .hero {
-                min-height: auto;
-                padding: 100px 0 80px;
-            }
-
-            .about-grid,
-            .projects-grid {
+        @media (max-width: 750px) {
+            .page {
                 grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 40px 24px;
             }
 
-            section {
-                padding: 80px 0;
+            .sidebar {
+                position: static;
             }
 
-            .contact-card {
-                padding: 38px 22px;
+            .profile-picture {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a class="logo" href="#">Vladislav Fedorov<span>.</span></a>
+    <div class="page">
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+        <aside class="sidebar">
+            <img
+                class="profile-picture"
+                src="profile.jpg"
+                alt="Your Name"
+            >
+
+            <h1>Your Name</h1>
+            <p class="subtitle">Statistics · Data Analytics</p>
+
+            <p class="bio">
+                Statistics graduate interested in data analytics,
+                statistical modeling, machine learning, and building
+                useful data tools.
+            </p>
+
+            <div class="links">
                 <a
-                    class="resume-nav-link"
+                    href="https://github.com/YOUR-USERNAME"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="YOUR-LINKEDIN-URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <a href="mailto:YOUR-EMAIL">
+                    Email
+                </a>
+
+                <a
                     href="resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -488,122 +240,18 @@
                     Résumé
                 </a>
             </div>
-        </div>
-    </nav>
+        </aside>
 
-    <main>
-        <header class="hero">
-            <div class="container hero-content">
-                <div class="eyebrow">
-                    <span class="status-dot"></span>
-                    Open to data and analytics opportunities
-                </div>
+        <main>
+            <section class="section">
+                <h2 class="section-title">Projects</h2>
 
-                <h1>
-                    I turn complex data into
-                    <span class="gradient-text">clear answers.</span>
-                </h1>
-
-                <p class="hero-description">
-                    I'm Vlad, a statistics graduate working with Python, R, 
-                    SQL, machine learning, and data visualization to uncover
-                    patterns and build practical data products.
-                </p>
-
-                <div class="hero-buttons">
-                    <a class="button button-primary" href="#projects">
-                        View my projects
-                    </a>
-
-                    <a
-                        class="button button-secondary"
-                        href="https://github.com/ValDevelopment"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        class="button button-secondary"
-                        href="https://www.linkedin.com/in/fedorov-vladislav-v/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <section id="about">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-label">About</div>
-                    <h2>A statistician who likes building things.</h2>
-                </div>
-
-                <div class="about-grid">
-                    <div class="glass-card about-card">
-                        <p>
-                            My background is in statistics, with experience
-                            applying analytical methods through Python, SQL, R,
-                            SAS, and modern visualization tools.
-                        </p>
-
-                        <p>
-                            I enjoy taking messy real-world datasets, structuring
-                            them into reliable systems, and turning the results
-                            into analysis that people can actually understand
-                            and use.
-                        </p>
-                    </div>
-
-                    <div class="glass-card quick-facts">
-                        <div class="fact">
-                            <span class="fact-label">Focus</span>
-                            <span class="fact-value">Data Analytics</span>
-                        </div>
-
-                        <div class="fact">
-                            <span class="fact-label">Location</span>
-                            <span class="fact-value">Chicago, Illinois</span>
-                        </div>
-
-                        <div class="fact">
-                            <span class="fact-label">Education</span>
-                            <span class="fact-value">Statistics</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-label">Selected work</div>
-                    <h2>Projects</h2>
-
-                    <p class="section-description">
-                        A collection of projects involving databases, statistical
-                        analysis, machine learning, and interactive applications.
-                    </p>
-                </div>
-
-                <div class="projects-grid">
-                    <a
-                        class="project-card"
-                        href="https://github.com/ValDevelopment/opl-relational-db"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project-number">01</div>
-
+                <div class="projects">
+                    <article class="project">
                         <h3>OpenPowerlifting Relational Database</h3>
 
                         <p>
-                            Built a reproducible preprocessing pipeline and a
+                            Built a Python preprocessing pipeline and a
                             normalized MySQL database containing more than
                             100,000 powerlifting competition results.
                         </p>
@@ -615,24 +263,23 @@
                             <span class="tag">SQL</span>
                         </div>
 
-                        <div class="project-link">
-                            View project <span>→</span>
+                        <div class="project-links">
+                            <a
+                                href="YOUR-PROJECT-URL"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
                         </div>
-                    </a>
+                    </article>
 
-                    <a
-                        class="project-card"
-                        href="YOUR-SECOND-PROJECT-URL"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project-number">02</div>
-
+                    <article class="project">
                         <h3>Your Second Project</h3>
 
                         <p>
-                            Explain the problem you investigated, what you built,
-                            and the most interesting result or capability.
+                            Briefly explain what the project does, what
+                            problem it addresses, and what you contributed.
                         </p>
 
                         <div class="tags">
@@ -641,24 +288,31 @@
                             <span class="tag">Streamlit</span>
                         </div>
 
-                        <div class="project-link">
-                            View project <span>→</span>
+                        <div class="project-links">
+                            <a
+                                href="YOUR-PROJECT-URL"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+
+                            <a
+                                href="YOUR-DEMO-URL"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live demo
+                            </a>
                         </div>
-                    </a>
+                    </article>
 
-                    <a
-                        class="project-card"
-                        href="YOUR-THIRD-PROJECT-URL"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project-number">03</div>
-
+                    <article class="project">
                         <h3>Your Third Project</h3>
 
                         <p>
-                            Add another strong analysis, dashboard, statistical
-                            model, or data application here.
+                            Add another analysis, dashboard, model, or
+                            application here.
                         </p>
 
                         <div class="tags">
@@ -667,95 +321,38 @@
                             <span class="tag">Visualization</span>
                         </div>
 
-                        <div class="project-link">
-                            View project <span>→</span>
+                        <div class="project-links">
+                            <a
+                                href="YOUR-PROJECT-URL"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
                         </div>
-                    </a>
-
-                    <a
-                        class="project-card"
-                        href="YOUR-FOURTH-PROJECT-URL"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div class="project-number">04</div>
-
-                        <h3>Your Fourth Project</h3>
-
-                        <p>
-                            Use this space for a Power BI dashboard, time-series
-                            project, survival analysis, or another substantial
-                            piece of work.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">Power BI</span>
-                            <span class="tag">Data Analysis</span>
-                        </div>
-
-                        <div class="project-link">
-                            View project <span>→</span>
-                        </div>
-                    </a>
+                    </article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="skills">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="section-label">Toolbox</div>
-                    <h2>Skills and technologies</h2>
-                </div>
+            <section class="section">
+                <h2 class="section-title">Skills</h2>
 
                 <div class="skills">
                     <span class="skill">Python</span>
-                    <span class="skill">Pandas</span>
-                    <span class="skill">NumPy</span>
-                    <span class="skill">scikit-learn</span>
-                    <span class="skill">PyTorch</span>
                     <span class="skill">SQL</span>
-                    <span class="skill">MySQL</span>
                     <span class="skill">R</span>
                     <span class="skill">SAS</span>
                     <span class="skill">Power BI</span>
                     <span class="skill">Tableau</span>
-                    <span class="skill">Streamlit</span>
-                    <span class="skill">Git</span>
                     <span class="skill">Machine Learning</span>
-                    <span class="skill">Regression</span>
-                    <span class="skill">Survival Analysis</span>
-                    <span class="skill">Time Series</span>
+                    <span class="skill">Statistical Modeling</span>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact">
-            <div class="container">
-                <div class="glass-card contact-card">
-                    <div class="section-label">Contact</div>
-                    <h2>Let's work with some data.</h2>
-
-                    <p>
-                        I'm currently interested in opportunities involving data
-                        analytics, statistical modeling, and machine learning.
-                    </p>
-
-                    <a
-                        class="button button-primary"
-                        href="mailto:vldslv.valeryevich@gmail.com"
-                    >
-                        Send me an email
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            Built by Vladislav Fedorov · 2026
-        </div>
-    </footer>
+            <footer>
+                © 2026 Your Name
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
