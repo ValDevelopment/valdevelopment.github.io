@@ -252,17 +252,17 @@
                         <h3>Clinical Trial Safety Analysis</h3>
                     
                         <p>
-                            Built a full CDISC SDTM/ADaM analysis pipeline in R using a public
-                            254-patient Alzheimer's clinical trial dataset, covering baseline
-                            demographics, adverse event summarization, and time-to-event survival
-                            analysis.
+                            An end-to-end clinical trial safety analysis using CDISC SDTM and ADaM
+                            datasets from a public 254-patient Alzheimer's trial. The project summarizes
+                            baseline characteristics and adverse events, then evaluates time to first
+                            adverse event across treatment groups.
                         </p>
-                    
+                        
                         <p>
-                            Modeled time to adverse event using Kaplan-Meier curves and a Cox
-                            proportional hazards model, identifying a dose-response safety signal
-                            with hazard ratios of 4.15 and 5.03 versus placebo. Confirmed the finding
-                            through an age-adjusted sensitivity analysis.
+                            Kaplan-Meier estimates and Cox proportional hazards models show a
+                            dose-response safety signal, with higher treatment doses associated with
+                            substantially greater adverse-event risk than placebo. An age-adjusted
+                            sensitivity analysis assesses the robustness of the result.
                         </p>
                     
                         <div class="tags">
@@ -298,16 +298,17 @@
                         <h3>League of Legends Win Prediction &amp; Analytics</h3>
                     
                         <p>
-                            Analyzed more than 47,000 professional League of Legends games to model
-                            win prediction using XGBoost, achieving an AUC of 0.84. Also forecasted
-                            meta-trend shifts with ARIMA and ETS models and built a bootstrapped Elo
-                            rating system for cross-region team strength.
+                            A statistical and machine-learning analysis of more than 47,000 professional
+                            League of Legends games. The project estimates how strongly early-game
+                            metrics predict match outcomes and compares predictive relationships across
+                            seasons and competitive regions.
                         </p>
-                    
+                        
                         <p>
-                            Built an interactive Tableau dashboard visualizing the model's
-                            early-game predictors and comparing raw win-rate splits with
-                            multivariate findings across game years.
+                            It includes an XGBoost win-prediction model, ARIMA and ETS forecasts of
+                            evolving meta trends, a bootstrapped Elo system for cross-region team
+                            strength, and an interactive Tableau dashboard for exploring early-game
+                            predictors.
                         </p>
                     
                         <div class="tags">
@@ -343,17 +344,17 @@
                         <h3>FAERS Disproportionality Analysis: Semaglutide</h3>
                     
                         <p>
-                            Conducted a post-market drug safety signal detection analysis using FDA
-                            FAERS Q4 2025 data for semaglutide products, including Ozempic, Wegovy,
-                            and Rybelsus. Applied PRR, ROR, and chi-square disproportionality methods
-                            with Haldane-Anscombe correction across 3,279 primary-suspect reports.
+                            A post-market drug safety analysis of semaglutide reports in the FDA FAERS
+                            Q4 2025 dataset. The project identifies adverse events reported
+                            disproportionately often for Ozempic, Wegovy, and Rybelsus among 3,279
+                            primary-suspect case reports.
                         </p>
-                    
+                        
                         <p>
-                            Built the analysis pipeline independently in Python and SAS, validated
-                            both implementations to produce identical results, and reviewed flagged
-                            signals against MedDRA coding noise and published GLP-1 safety
-                            literature.
+                            Potential safety signals are evaluated using PRR, ROR, chi-square testing,
+                            and Haldane-Anscombe correction. The results are then reviewed for MedDRA
+                            coding artifacts and compared with established and emerging findings in the
+                            GLP-1 safety literature.
                         </p>
                     
                         <div class="tags">
@@ -389,16 +390,16 @@
                         <h3>OpenPowerlifting Relational Database</h3>
                     
                         <p>
-                            Designed a normalized MySQL database for 100,000 OpenPowerlifting
-                            competition results, separating lifter, meet, and result data into
-                            linked tables with primary and foreign key constraints.
+                            A normalized relational database containing 100,000 OpenPowerlifting
+                            competition results. Lifters, meets, and individual performances are stored
+                            in linked MySQL tables with primary and foreign key constraints.
                         </p>
-                    
+                        
                         <p>
-                            Built a reproducible Python preprocessing pipeline and wrote SQL
-                            analyses using joins, conditional aggregation, CTEs, and window
-                            functions to examine federation participation, performance differences,
-                            and lift-attempt success rates.
+                            The database supports SQL analysis of federation participation, performance
+                            differences, sanctioned competitions, and lift-attempt success rates using
+                            joins, conditional aggregation, common table expressions, and window
+                            functions.
                         </p>
                     
                         <div class="tags">
@@ -416,53 +417,6 @@
                                 rel="noopener noreferrer"
                             >
                                 GitHub
-                            </a>
-                        </div>
-                    </article>
-                    
-                    
-                    <article class="project">
-                        <h3>Clinical Trial Power Calculator</h3>
-                    
-                        <p>
-                            Built a two-arm clinical trial sample size and power calculator in
-                            Python and Streamlit. The application supports continuous, binary, and
-                            time-to-event endpoints using closed-form methods alongside
-                            simulation-based power estimates.
-                        </p>
-                    
-                        <p>
-                            Implemented noncentral t, arcsine, and Schoenfeld formulas, as well as
-                            simulations that fit ANCOVA, logistic regression, and Cox proportional
-                            hazards models to synthetic trial data. Validated the formulas against
-                            independent benchmarks and demonstrated differences between
-                            closed-form power targets and regression-based Wald tests.
-                        </p>
-                    
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">Power Analysis</span>
-                            <span class="tag">Clinical Trials</span>
-                            <span class="tag">Simulation</span>
-                            <span class="tag">Survival Analysis</span>
-                        </div>
-                    
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/ValDevelopment/clinical-trial-power-calculator"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                            </a>
-                    
-                            <a
-                                href="https://clinical-trial-power-calculator.streamlit.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Live App
                             </a>
                         </div>
                     </article>
