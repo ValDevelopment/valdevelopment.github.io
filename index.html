@@ -30,9 +30,9 @@
 
         .page {
             display: grid;
-            grid-template-columns: 280px minmax(0, 800px);
-            gap: 70px;
-            max-width: 1200px;
+            grid-template-columns: 260px minmax(0, 1fr);
+            gap: 50px;
+            max-width: 1500px;
             margin: 0 auto;
             padding: 70px 40px;
         }
@@ -93,11 +93,17 @@
             font-size: 1.5rem;
         }
 
-        .projects {
+       .projects {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
-            align-items: stretch;
+            align-items: start;
+        }
+
+        @media (max-width: 850px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
         }
 
         .project {
@@ -111,7 +117,6 @@
         }
 
         .project {
-            height: 100%;
             display: flex;
             flex-direction: column;
         }
